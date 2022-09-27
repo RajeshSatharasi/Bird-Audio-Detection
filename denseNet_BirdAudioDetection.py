@@ -194,30 +194,6 @@ X_test = X_test.reshape((X_test.shape[0],862,40,1)).astype('float32')
 X_test_actual1 = X_test_actual1[...,np.newaxis]
 X_test_actual1 = X_test_actual1.reshape((X_test_actual1.shape[0],862,40,1)).astype('float32')
 
-# all_layers = [Conv2D(kernel_size = 3, filters = 32, activation='relu', input_shape=(862,40,1), padding='same'),
-#           Conv2D(kernel_size = 3, filters = 32, activation='relu',padding='same'),  
-#           MaxPooling2D(2,2),
-#           Conv2D(kernel_size = 3, filters = 48, activation='relu',padding='same'),
-#           Conv2D(kernel_size = 3, filters = 48, activation='relu',padding='same'),
-#           MaxPooling2D(2,2),            
-#           Conv2D(kernel_size = 3, filters = 64, activation='relu',padding='same'),
-#           Conv2D(kernel_size = 3, filters = 64, activation='relu',padding='same'),
-#           MaxPooling2D(2,2),
-#           Flatten(),              
-#           Dense(128, activation = 'relu'),
-#           Dropout(0.5),
-#           Dense(num_classes, activation = 'softmax')]
-# model = Sequential(all_layers)
-
-# # Compile model
-
-# model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-
-# model.fit(X_train, Y_train,validation_data = (X_test, Y_test),batch_size=32, epochs = 10)
-
-# y_predicted_cnn = model.predict_classes(X_test_actual1)
-
-
 
 
 
